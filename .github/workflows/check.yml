@@ -38,7 +38,9 @@ jobs:
           node-version: 16
       - name: Install
         run: yarn
-      - name: Test
-        run: yarn test:unit --coverage
-      - name: Upload coverage
-        run: yarn codecov
+      - name: Test Contracts
+        run: yarn test:unit:sm
+      # - name: Test
+      #   run: yarn test:unit:base --coverage
+      # - name: Upload coverage
+      #   run: yarn codecov

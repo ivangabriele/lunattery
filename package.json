@@ -9,7 +9,7 @@
     "prepare": "husky install",
     "start": "node ./server/index.js",
     "test:lint": "eslint . && solhint ./contracts/**/*.sol",
-    "test:unit": "test:unit:code && test:unit:sm",
+    "test:unit": "yarn test:unit:base && yarn test:unit:sm",
     "test:unit:base": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --config=./config/jest.config.js",
     "test:unit:sm": "hardhat test"
   },
