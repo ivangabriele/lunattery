@@ -1,0 +1,58 @@
+{
+  "extends": "@ivangabriele/eslint-config-base",
+  "rules": {},
+  "overrides": [
+    {
+      "files": ["./server/**/*.mjs"],
+      "parserOptions": {
+        "ecmaVersion": 2022,
+        "sourceType": "module"
+      },
+      "env": {
+        "browser": false,
+        "node": true
+      }
+    },
+    {
+      "files": ["./web/**/*.mjs"],
+      "parserOptions": {
+        "ecmaVersion": 2022,
+        "sourceType": "module"
+      },
+      "env": {
+        "browser": true,
+        "node": false
+      }
+    },
+    {
+      "files": ["./contracts/__tests__/**/*.test.js"],
+      "env": {
+        "browser": false,
+        "jest": false,
+        "mocha": true,
+        "node": true
+      },
+      "rules": {
+        "jest/no-disabled-tests": "off",
+        "jest/no-focused-tests": "off",
+        "jest/no-identical-title": "off",
+        "jest/prefer-to-have-length": "off",
+        "jest/valid-expect": "off"
+      }
+    },
+    {
+      "files": ["./hardhat.config.js"],
+      "globals": {
+        "task": true
+      },
+      "rules": {
+        "import/no-extraneous-dependencies": [
+          "error",
+          {
+            "devDependencies": true
+          }
+        ]
+      }
+    }
+  ]
+}
