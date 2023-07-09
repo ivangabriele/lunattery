@@ -42,7 +42,7 @@
     "husky": "8.0.1",
     "jest": "28.1.1",
     "nodemon": "2.0.16",
-    "prettier": "2.7.1",
+    "prettier": "3.0.0",
     "solhint": "3.3.7"
   },
   "prettier": "@ivangabriele/prettier-config"
